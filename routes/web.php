@@ -13,6 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::get('/', function () {
+//     return view('layout.navbar');
+// });
 Route::get('/', function () {
-    return view('welcome');
+    return view('login');
+});
+Route::get('/spengajuan', function () {
+    return view('spengajuan');
+});
+Route::get('/penjadwalan', function () {
+    return view('penjadwalan');
 });
