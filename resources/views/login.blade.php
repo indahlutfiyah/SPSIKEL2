@@ -44,7 +44,7 @@
                       }
                     }  ?>" />
                     <div id="error_signup_email"></div>
-                    <input type="email" id="mail_signup" name="mail" placeholder="E-mail"
+                    <input type="number" id="mail_signup" name="NIP_PAA" placeholder="NIP"
                       value="<?php if (isset($_GET['errorp'])){
                       if ($_GET['errorp']=='invaliduid' || $_GET['errorp']=='passwordcheck' || $_GET['errorp']=='emptyfields' || $_GET['errorp']=='usertaken'){
                         echo  isset($_GET['mail']) ? $_GET['mail']:'';
@@ -61,7 +61,7 @@
 
                 </div>
                 <div class="form-container sign-in-container">
-                  <form action="includes/login.inc.php" method="post" id="signin_form">
+                  <form action="/login" method="post" id="signin_form">
                     <h1 class="title">Login</h1>
                     <br>
                     <?php
@@ -79,7 +79,7 @@
                     }
                 }?>
                     <div id="error_signin_mail"></div>
-                    <input type="email" id="mailsignin" placeholder="Email" name="mailuid" placeholder="Username/E-mail"
+                    <input type="number" id="mailsignin" placeholder="NIP" name="mailuid" placeholder="NIP"
                       value="<?php if (isset($_GET['error'])){
                                       if ($_GET['error']=="wrongpwd" || $_GET['error']=="emptyfields"){
                                             echo  isset($_GET['mail'])?$_GET['mail']:'';
@@ -90,7 +90,7 @@
                     <div id="error_signin_pwd"></div>
                     <input type="password" id="pwdsignin" name="pwd" placeholder="Password" />
                     <a href="mail_input.php">Forgot your password?</a>
-                    <button>Masuk</button>
+                    <button><a href="/penjadwalan">Masuk</button>
                   </form>
                 </div>
                 <div class="overlay-container">
